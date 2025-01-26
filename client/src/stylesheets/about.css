@@ -2,7 +2,7 @@ h1 {
   color: white;
   font-weight: bold !important;
   text-transform: uppercase;
-  text-shadow: 3px 3px 45px rgba(0, 0, 0, 0.8), 1px 1px 40px rgba(0, 0, 0, 0.2);
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8), 1px 1px 10px rgba(0, 0, 0, 0.2);
   margin: 15px 0px;
 }
 
@@ -24,22 +24,19 @@ h1 {
   margin-bottom: 30px;
 }
 .about-image {
-  height: 300px;
-  overflow: hidden;
-  transform: scale(2.5) rotate(-2deg);
-  top: 40px;
-  position: relative;
-  filter: drop-shadow(0.1px 0.1px 40px rgba(0, 0, 0, 0.7));
+  height: 80%;
+  transform: scale(2);
+  top: 50px;
   position: absolute;
   transition: 0.3s;
 }
-/* 
-.about-img-container{
-    width: 300px;
-    height: 300px;
-    background-color: red;
+.about-image-container {
+  overflow: hidden;
 }
- */
+
+.about-content {
+  transition: 0.3s;
+}
 
 @media only screen and (max-width: 1000px) {
   .about-underline {
@@ -48,18 +45,38 @@ h1 {
   }
   .about-image {
     top: 60px;
+    left: 20px;
+    transform: scale(1.7);
     transition: 0.3s;
   }
 }
-@media only screen and (max-width: 768px) {
-  .about-image-container,
+@media only screen and (max-width: 900px) {
   .about-image {
-    display: none;
+    top: 60px;
+    left: 0px;
+    transform: scale(1.4);
+    transition: 0.3s;
   }
 }
+@media only screen and (max-width: 767px) {
+  /* .about-image-container,
+  .about-image {
+    display: none;
+    } */
+  /* .about-content {
+    font-size: 13px !important;
+    background-color: red;
+    transition: 0.3s;
+  } */
+}
+
 @media only screen and (max-width: 600px) {
   .about-underline {
     width: 100px;
     transition: 0.3s;
+  }
+  .about-content{
+    font-size: 14px;
+    transition: .3s;
   }
 }

@@ -32,3 +32,41 @@
   width: 100px;
   transition: 0.5s;
 }
+.contact-text,
+.hello-text,
+.links-text {
+  transition: 0.3s;
+}
+
+@media only screen and (max-width: 500px) {
+  .contact-text {
+    font-size: 35px;
+    transition: 0.3s;
+  }
+  .hello-text,
+  .links-text {
+    font-size: 30px;
+    transition: 0.3s;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .hello-text,
+  .links-text {
+    font-size: 24px;
+    transition: 0.3s;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .hello-text {
+    margin-bottom: 15px;
+    font-size: 35px;
+  }
+  .break {
+    display: none;
+  }
+  .links-text {
+    font-size: 30px;
+    transition: 0.3s;
+    margin: 0 auto;
+  }
+}

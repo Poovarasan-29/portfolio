@@ -124,7 +124,6 @@
   font-weight: 500;
 }
 
-
 .carousel-item {
   height: 100vh;
   width: 100%;
@@ -234,6 +233,7 @@
   width: 60px;
   height: 50px;
   transform: scale(3);
+  transition: 0.4s;
 }
 
 /* theme Mode Dark and Light */
@@ -247,27 +247,25 @@
   cursor: pointer;
   margin: auto 0px auto 10px;
 }
-.mode-not-available{
+.mode-not-available {
   font-size: 11px;
   bottom: -42px;
 }
 
-.nav-li:hover .nav-list+ p{
+.nav-li:hover .nav-list + p {
   border-bottom: none;
 }
 
 /* Active Nav Item */
-.active-nav-item .nav-list+p{
+.active-nav-item .nav-list + p {
   margin: auto;
   width: 50px;
   transition: 0.5s;
   background-color: blue;
 }
-.disactive-nav-item{
+.disactive-nav-item {
   border-bottom: none;
 }
-
-
 
 @media only screen and (max-width: 576px) {
   .nav-list + p {
@@ -279,9 +277,58 @@
     width: 50px;
     transition: 0.5s;
   }
-  .mode-not-available{
+  .mode-not-available {
     top: 70%;
     user-select: none;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .logo {
+    transform: scale(2.4);
+    transition: 0.4s;
+  }
+  .home h1 {
+    font-size: 24px;
+    transition: 0.3s;
+  }
+  .home h3 {
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  .download-text {
+    font-size: 12px;
+    transition: 0.3s;
+  }
+  .animate-btn {
+    width: 105px;
+    height: 30px;
+  }
+  .animate-btn span {
+    width: 2px;
+    height: 2px;
+  }
+}
+@media only screen and (max-width: 300px) {
+
+  .home h1 {
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  .home h3 {
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  .download-text {
+    font-size: 12px;
+    transition: 0.3s;
+  }
+  .animate-btn {
+    width: 105px;
+    height: 30px;
+  }
+  .animate-btn span {
+    width: 2px;
+    height: 2px;
   }
 }
 @media only screen and (min-width: 576px) {

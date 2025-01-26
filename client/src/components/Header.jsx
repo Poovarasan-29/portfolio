@@ -3,7 +3,6 @@ import logo from "../assets/logo.png";
 
 export default function Header({ scrollInfo }) {
   const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
-  const browserHeight = 620;
   const userScrolledHeight = scrollInfo.scrollPercentage;
   const [toggelIsClicked, setToggelIsClicked] = useState(false);
   const [toggleBtnDataBsToggle, setToggleBtnDataBsToggle] =
@@ -19,7 +18,7 @@ export default function Header({ scrollInfo }) {
   return (
     <nav
       className="navbar navbar-expand-sm position-fixed top-0"
-      style={{ zIndex: "999", width: "100%" }}
+      style={{ zIndex: "999", width: "100vw" }}
     >
       <div className="container">
         {/* Logo */}

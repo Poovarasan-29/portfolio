@@ -3,9 +3,24 @@ import CurveArrow from "./CurveArrow";
 import rentEasee from "../assets/projectImages/renteaseeIMG.png";
 import JWTauthentication from "../assets/projectImages/JWTauthenticationIMG.png";
 import ToDoApplication from "../assets/projectImages/ToDoAppIMG.png";
+import TypingClassIMG from "../assets/projectImages/TypingClassIMG.png";
 
 export default function Projects() {
   const contents = [
+    {
+      thumbnailImg: TypingClassIMG,
+      title: "Typing Test",
+      description:
+        "Typing test web application assesses and improves typing skills using provided text. Tracks accuracy, speed, and displays performance statistics (correct/incorrect entries, time). Offers a user-friendly interface for practice and progress monitoring.",
+      technologies: ["React", "Bootstrap"],
+      links: {
+        github: "https://github.com/Poovarasan-29/TypingClass",
+        linkedin: "",
+        site: "https://typing-class.vercel.app/",
+        video: "",
+      },
+      ongoing: false,
+    },
     {
       thumbnailImg: ToDoApplication,
       title: "ToDo Application",
@@ -15,7 +30,7 @@ export default function Projects() {
       links: {
         github: "https://github.com/Poovarasan-29/Todo-MERN",
         linkedin: "",
-        site: "https://todo-mern-black.vercel.app/",
+        site: "https://typing-class.vercel.app/",
         video: "",
       },
       ongoing: false,
@@ -62,24 +77,22 @@ export default function Projects() {
   ];
 
   return (
-    <div className="projects m-0" id="projects">
+    <div className="projects p-sm-5" id="projects">
       <h1 className="m-0 project-text">What I have done so far</h1>
       <CurveArrow />
-      <div className="row row-cols-1 row-cols-md-2 justify-content-center g-4 p-5 mt-5">
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center w-100 mx-auto" style={{overflow:'hidden'}}>
         {contents.map((content, index) => (
-          <div
-            // className={`${
-            //   contents.length % 2 == 1 && contents.length - 1 == index
-            //     ? "col-12 "
-            //     : "col-12 col-md-6"
-            // }`}
-            key={index}
-          >
-            <div className="card">
+          <div key={index} className="p-2"> 
+            <div className="card p-0 h-100">
               <img
                 src={content.thumbnailImg}
-                className="card-img-top p-3"
+                className="card-img-top p-"
                 alt="..."
+                style={{
+                  border: "1px solid",
+                  borderColor: "transparent",
+                  borderBottomColor: "rgba(0,0,0,.2)",
+                }}
               />
               <div className="card-body">
                 <h5 className="card-title color-purple">{content.title}</h5>
@@ -117,11 +130,7 @@ export default function Projects() {
                       }
                       className="btn external-links"
                       target="_blank"
-                      title={
-                        content.links.site
-                          ? "Visit"
-                          : "Video"
-                      }
+                      title={content.links.site ? "Visit" : "Video"}
                     >
                       <i
                         className={`bi ${
@@ -138,6 +147,7 @@ export default function Projects() {
                 </div>
               </div>
             </div>
+            {/* </div> */}
           </div>
         ))}
       </div>

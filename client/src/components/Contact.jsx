@@ -2,18 +2,18 @@ import "../stylesheets/contact.css";
 
 export default function Contact() {
   return (
-    <div className="contact p-5" id="contact">
+    <div className="contact p-3 p-sm-5" id="contact">
       <div>
-        <h1 className="display-2">Contact</h1>
+        <h1 className="display-2 contact-text">Contact</h1>
         <div className="about-underline contact-underline"></div>
       </div>
       <div className="row mt-4">
         <div className="col-0 col-md"></div>
         <div className="col hello-text display-4 text-white opacity-75">
-          Say <br />
+          Say <br className="break" />
           <span className="text-uppercase fw-bold">Hello!</span>
         </div>
-        <div className="col display-4 text-white">
+        <div className="col display-4 links-text text-white">
           <ul className="list-unstyled contact-list">
             <li>
               <a href="mailto:poovarasan.say@gmail.com?body=Hello Buddy!">
@@ -37,10 +37,7 @@ export default function Contact() {
               <p></p>
             </li>
             <li>
-              <a
-                href="https://leetcode.com/u/POOVARASAN_S_29/"
-                target="_blank"
-              >
+              <a href="https://leetcode.com/u/POOVARASAN_S_29/" target="_blank">
                 Leetcode
               </a>
               <p></p>

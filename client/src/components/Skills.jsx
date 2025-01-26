@@ -34,17 +34,14 @@ export default function Skills() {
     },
   ];
   return (
-    <div
-      className="skills p-5"
-      id="skills"
-   
-    >
+    <div className="skills p-2 p-md-5" id="skills">
       <div>
         <h1 className="display-2">Overview</h1>
         <div className="about-underline"></div>
         <div className="about-underline underline2"></div>
       </div>
-      <div className="d-flex flex-wrap justify-content-center">
+
+      <div className="d-flex flex-wrap justify-content-center skill-overview-container">
         {contents.map((value, index) => (
           <div className="skill-overview-box p-5 m-3" key={index}>
             <span className="animate-border"></span>
