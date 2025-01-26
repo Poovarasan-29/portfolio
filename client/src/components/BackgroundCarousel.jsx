@@ -1,7 +1,7 @@
 import React from "react";
-import image1 from "../assets/homeIMG1.jpg";
-import image2 from "../assets/homeIMG2.jpg";
-import image3 from "../assets/homeIMG3.jpg";
+import image1 from "/homeIMG1.jpg";
+import image2 from "/homeIMG2.jpg";
+import image3 from "/homeIMG3.jpg";
 import Header from "./Header";
 import Home from "./Home";
 

@@ -1,19 +1,19 @@
 import "../stylesheets/skills.css";
-import html from "../assets/skillsImages/html.png";
-import css from "../assets/skillsImages/css.png";
-import javascript from "../assets/skillsImages/javascript.png";
-import reactjs from "../assets/skillsImages/reactjs.png";
-import bootstrap from "../assets/skillsImages/bootstrap.png";
-import redux from "../assets/skillsImages/redux.png";
-import nodejs from "../assets/skillsImages/nodejs.png";
-import expressjs from "../assets/skillsImages/expressjs.png";
-import mongodb from "../assets/skillsImages/mongodb.png";
-import mongoose from "../assets/skillsImages/mongoose.png";
-import git from "../assets/skillsImages/git.png";
-import github from "../assets/skillsImages/github.png";
-import vscode from "../assets/skillsImages/vscode.png";
-import postman from "../assets/skillsImages/postman.png";
-import mongodbCompass from "../assets/skillsImages/mongodbCompass.png";
+import html from "/skillsImages/html.png";
+import css from "/skillsImages/css.png";
+import javascript from "/skillsImages/javascript.png";
+import reactjs from "/skillsImages/reactjs.png";
+import bootstrap from "/skillsImages/bootstrap.png";
+import redux from "/skillsImages/redux.png";
+import nodejs from "/skillsImages/nodejs.png";
+import expressjs from "/skillsImages/expressjs.png";
+import mongodb from "/skillsImages/mongodb.png";
+import mongoose from "/skillsImages/mongoose.png";
+import git from "/skillsImages/git.png";
+import github from "/skillsImages/github.png";
+import vscode from "/skillsImages/vscode.png";
+import postman from "/skillsImages/postman.png";
+import mongodbCompass from "/skillsImages/mongodbCompass.png";
 
 export default function Skills() {
   const contents = [

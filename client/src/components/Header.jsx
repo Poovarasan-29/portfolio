@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/logo.png";
+import logo from "/logo.png";
 
 export default function Header({ scrollInfo }) {
   const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
