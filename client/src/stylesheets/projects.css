@@ -22,6 +22,7 @@
   position: absolute;
   top: -6%;
   left: 42%;
+  display: none;
 }
 .external-links:hover {
   color: rgb(0, 85, 255);
@@ -102,21 +103,20 @@
     font-size: 30px;
     transition: 0.3s;
   }
-  .curve-arrow {
-    left: 20%;
-    transform: rotate(10deg);
-    transition: 0.3s;
-  }
 }
+
 @media only screen and (min-width: 500px) {
   .project-text {
     bottom: 20px;
     font-size: 35px;
     transition: 0.3s;
   }
+}
+@media only screen and (min-width: 576px) {
   .curve-arrow {
-    left: 27%;
-    transform: rotate(10deg);
+    display: flex;
+    left: 10%;
+    transform: rotate(16deg);
     transition: 0.3s;
   }
 }
