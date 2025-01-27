@@ -1,19 +1,19 @@
 import "../stylesheets/skills.css";
-import html from "/skillsImages/html.png";
-import css from "/skillsImages/css.png";
-import javascript from "/skillsImages/javascript.png";
-import reactjs from "/skillsImages/reactjs.png";
-import bootstrap from "/skillsImages/bootstrap.png";
-import redux from "/skillsImages/redux.png";
-import nodejs from "/skillsImages/nodejs.png";
-import expressjs from "/skillsImages/expressjs.png";
-import mongodb from "/skillsImages/mongodb.png";
-import mongoose from "/skillsImages/mongoose.png";
-import git from "/skillsImages/git.png";
-import github from "/skillsImages/github.png";
-import vscode from "/skillsImages/vscode.png";
-import postman from "/skillsImages/postman.png";
-import mongodbCompass from "/skillsImages/mongodbCompass.png";
+import html from "../assets/skillsImages/html.webp";
+import css from "../assets/skillsImages/css.webp";
+import javascript from "../assets/skillsImages/javascript.webp";
+import reactjs from "../assets/skillsImages/reactjs.webp";
+import bootstrap from "../assets/skillsImages/bootstrap.webp";
+import redux from "../assets/skillsImages/redux.webp";
+import nodejs from "../assets/skillsImages/nodejs.webp";
+import expressjs from "../assets/skillsImages/expressjs.webp";
+import mongodb from "../assets/skillsImages/mongodb.webp";
+import mongoose from "../assets/skillsImages/mongoose.webp";
+import git from "../assets/skillsImages/git.webp";
+import github from "../assets/skillsImages/github.webp";
+import vscode from "../assets/skillsImages/vscode.webp";
+import postman from "../assets/skillsImages/postman.webp";
+import mongodbCompass from "../assets/skillsImages/mongodbCompass.webp";
 
 export default function Skills() {
   const contents = [

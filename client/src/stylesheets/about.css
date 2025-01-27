@@ -58,17 +58,6 @@ h1 {
     transition: 0.3s;
   }
 }
-@media only screen and (max-width: 767px) {
-  /* .about-image-container,
-  .about-image {
-    display: none;
-    } */
-  /* .about-content {
-    font-size: 13px !important;
-    background-color: red;
-    transition: 0.3s;
-  } */
-}
 
 @media only screen and (max-width: 600px) {
   .about-underline {

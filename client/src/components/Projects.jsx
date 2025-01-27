@@ -1,10 +1,9 @@
 import "../stylesheets/projects.css";
 import CurveArrow from "./CurveArrow";
-import rentEasee from "/projectImages/renteaseeIMG.png";
-import JWTauthentication from "/projectImages/JWTauthenticationIMG.png";
-import ToDoApplication from "/projectImages/ToDoAppIMG.png";
-import TypingClassIMG from "/projectImages/TypingClassIMG.png";
-
+import rentEasee from "../assets/projectImages/renteaseeIMG.webp";
+import JWTauthentication from "../assets/projectImages/JWTauthenticationIMG.webp";
+import ToDoApplication from "../assets/projectImages/ToDoAppIMG.webp";
+import TypingClassIMG from "../assets/projectImages/TypingClassIMG.webp";
 
 export default function Projects() {
   const contents = [

@@ -22,7 +22,6 @@
   transition: 0.7s;
   position: relative;
   overflow: hidden;
-  /* flex-grow: 1; */
 }
 .skill-overview-box h3 {
   color: blueviolet;
@@ -34,79 +33,6 @@
   transition: all 0.7s;
 }
 
-/* .skill-overview-box p {
-  color: black;
-  transition: 0.3s;
-}
-.skill-overview-box:hover p {
-  color: blueviolet;
-  transition: 0.3s;
-}
-.skill-overview-box:hover h3 {
-  color: white;
-  transition: 0.3s;
-} */
-
-/* .skill-overview-box:hover .animate-border {
-  width: 40px;
-  height: 4px;
-  background-color: black;
-  border-radius: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: move 8s linear infinite;
-} */
-
-@keyframes move {
-  0% {
-    opacity: 0;
-    transform: translateX(0px) translateY(5px);
-  }
-  5% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0;
-    transform: translateX(340px) translateY(5px);
-  }
-  26% {
-    transform: translateX(353px) translateY(15px) rotate(90deg);
-  }
-  27%,
-  52%,
-  77% {
-    opacity: 0;
-  }
-  28%,
-  53%,
-  78% {
-    opacity: 0.7;
-  }
-  30%,
-  55%,
-  79% {
-    opacity: 0.7;
-  }
-  50% {
-    opacity: 0;
-    transform: translate(353px, 155px) rotate(90deg);
-  }
-  51% {
-    transform: translate(350px, 170px) rotate(180deg);
-  }
-  75% {
-    opacity: 0;
-    transform: translate(0px, 170px) rotate(180deg);
-  }
-  76% {
-    transform: translate(-10px, 160px) rotate(270deg);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-10px, 18px) rotate(270deg);
-  }
-}
 .skills-images div div {
   z-index: 100;
 }
