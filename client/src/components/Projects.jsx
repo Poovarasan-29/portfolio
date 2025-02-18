@@ -30,7 +30,7 @@ export default function Projects() {
       links: {
         github: "https://github.com/Poovarasan-29/Todo-MERN",
         linkedin: "",
-        site: "https://typing-class.vercel.app/",
+        site: "https://todo-mern-black.vercel.app/",
         video: "",
       },
       ongoing: false,
