@@ -4,6 +4,7 @@ import rentEasee from "../assets/projectImages/renteaseeIMG.webp";
 import JWTauthentication from "../assets/projectImages/JWTauthenticationIMG.webp";
 import ToDoApplication from "../assets/projectImages/ToDoAppIMG.webp";
 import TypingClassIMG from "../assets/projectImages/TypingClassIMG.webp";
+import InfiniteFortune from "../assets/projectImages/InfiniteFortuneIMG.png";
 
 export default function Projects() {
   const contents = [
@@ -38,7 +39,7 @@ export default function Projects() {
 
     {
       thumbnailImg: JWTauthentication,
-      title: "Registration Form with JWT Authentication",
+      title: "Registration Form",
       description:
         "Developed a secure JWT-based authentication system with strong password validation, email verification, email duplication checks, and an OTP-based Forgot Password feature.",
       technologies: ["HTML", "CSS", "Bootstrap", "Javascript", "MERN", "JWT"],
@@ -51,12 +52,25 @@ export default function Projects() {
       ongoing: false,
     },
     {
+      thumbnailImg: InfiniteFortune,
+      title: "Infinite Fortune",
+      description:
+        "This is an investment-based web app where users buy profit plans, earn daily returns, claim profits, and withdraw once eligible. Users also earn a 30% referral bonus from invitee deposits.",
+      technologies: ["CSS", "Bootstrap", "MERN", "JWT", "Node mailer","bcrypt"],
+      links: {
+        github: "https://github.com/Poovarasan-29/Infinite-Fortune",
+        linkedin: "",
+        site: "https://infinite-fortune.vercel.app/?referral=960922",
+        video: "",
+      },
+      ongoing: false,
+    },
+    {
       thumbnailImg: rentEasee,
       title: "RentEasee",
       description:
         "A platform for renting yellow-board vehicles and hiring freelance drivers, featuring vehicle listings, driver profiles, real-time search, and membership-based access control.",
       technologies: [
-        "HTML",
         "CSS",
         "Bootstrap",
         "Javascript",
@@ -80,9 +94,12 @@ export default function Projects() {
     <div className="projects p-sm-5" id="projects">
       <h1 className="m-0 project-text">What I have done so far</h1>
       <CurveArrow />
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center w-100 mx-auto" style={{overflow:'hidden'}}>
+      <div
+        className="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center w-100 mx-auto"
+        style={{ overflow: "hidden" }}
+      >
         {contents.map((content, index) => (
-          <div key={index} className="p-2"> 
+          <div key={index} className="p-2">
             <div className="card p-0 h-100">
               <img
                 src={content.thumbnailImg}
