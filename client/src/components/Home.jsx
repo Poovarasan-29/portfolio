@@ -12,7 +12,7 @@ export default function Home({ classname }) {
       <h3 className="gradient-text mern-stack-text display-6">
         MERN Stack Developer
       </h3>
-      <a href="/PoovarasanS.pdf" className="btn" download="PoovarasanCV.pdf">
+      <a href="/Poovarasan_Resume.pdf" className="btn" download="Poovarasan_Resume.pdf">
         <div className="animate-btn">
           <span className="bubble"></span>
           <span className="bubble"></span>
