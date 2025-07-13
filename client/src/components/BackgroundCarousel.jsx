@@ -1,4 +1,3 @@
-import React from "react";
 import image1 from "../assets/homeImages/homeIMG1.webp";
 import image2 from "../assets/homeImages/homeIMG2.webp";
 import image3 from "../assets/homeImages/homeIMG3.webp";
@@ -46,6 +45,7 @@ const BackgroundCarousel = ({ scrollInfo }) => {
             className="carousel-item active"
             style={{
               backgroundImage: `url(${image1})`,
+              backgroundPosition: "50% 25%",
             }}
           >
             <Home classname="image1home" />
@@ -53,8 +53,8 @@ const BackgroundCarousel = ({ scrollInfo }) => {
           <div
             className="carousel-item"
             style={{
-              backgroundImage: `url(${image3})`,
-              backgroundPosition: "50% 18%",
+              backgroundImage: `url(${image2})`,
+              backgroundPosition: "50% 27%",
             }}
           >
             <Home classname="image2home" />
@@ -62,8 +62,8 @@ const BackgroundCarousel = ({ scrollInfo }) => {
           <div
             className="carousel-item"
             style={{
-              backgroundImage: `url(${image2})`,
-              backgroundPosition: "50% 38%",
+              backgroundImage: `url(${image3})`,
+              backgroundPosition: "50% 5%",
             }}
           >
             <Home classname="image3home" />

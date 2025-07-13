@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.webp";
 
 export default function Header({ scrollInfo }) {
@@ -7,13 +7,17 @@ export default function Header({ scrollInfo }) {
   const [toggelIsClicked, setToggelIsClicked] = useState(false);
   const [toggleBtnDataBsToggle, setToggleBtnDataBsToggle] =
     useState("collapse");
-  const [lightMode, setLightMode] = useState(true);
+  const [theme, setTheme] = useState("light");
   const [showNotAvailableText, setShowNotAvailableText] = useState(false);
 
   function handleNavItempClicked() {
     if (toggelIsClicked) {
     }
   }
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+  }, [theme])
 
   return (
     <nav
@@ -55,25 +59,24 @@ export default function Header({ scrollInfo }) {
           <ul className="navbar-nav ms-auto">
             {navItems.map((item, index) => (
               <li
-                className={`nav-item nav-li ${
-                  userScrolledHeight > 90 && index == 4
-                    ? "active-nav-item"
-                    : userScrolledHeight <= 90 &&
-                      userScrolledHeight > 52 &&
-                      index == 3
+                className={`nav-item nav-li ${userScrolledHeight > 90 && index == 4
+                  ? "active-nav-item"
+                  : userScrolledHeight <= 90 &&
+                    userScrolledHeight > 52 &&
+                    index == 3
                     ? "active-nav-item"
                     : userScrolledHeight <= 52 &&
                       userScrolledHeight > 33 &&
                       index == 2
-                    ? "active-nav-item"
-                    : userScrolledHeight <= 33 &&
-                      userScrolledHeight > 14 &&
-                      index == 1
-                    ? "active-nav-item"
-                    : userScrolledHeight <= 14 && index == 0
-                    ? "active-nav-item"
-                    : "disactive-nav-item"
-                }`}
+                      ? "active-nav-item"
+                      : userScrolledHeight <= 33 &&
+                        userScrolledHeight > 14 &&
+                        index == 1
+                        ? "active-nav-item"
+                        : userScrolledHeight <= 14 && index == 0
+                          ? "active-nav-item"
+                          : "disactive-nav-item"
+                  }`}
                 style={{ width: "fit-content", margin: "0 auto" }}
                 onClick={handleNavItempClicked}
                 key={index}
@@ -88,13 +91,13 @@ export default function Header({ scrollInfo }) {
               </li>
             ))}
 
-            <li
+            {/* <li
               className="theme-mode"
-              onClick={() => setLightMode(!lightMode)}
-              onMouseEnter={() => setShowNotAvailableText(true)}
-              onMouseLeave={() => setShowNotAvailableText(false)}
+              onClick={() => setTheme((currTheme) => currTheme == 'light' ? 'dark' : 'light')}
+            onMouseEnter={() => setShowNotAvailableText(true)}
+            onMouseLeave={() => setShowNotAvailableText(false)}
             >
-              {lightMode ? (
+              {theme == 'light' ? (
                 <i className={`bi bi-moon-fill fs-5`}></i>
               ) : (
                 <i className={`bi bi-brightness-high fs-5`}></i>
@@ -105,7 +108,7 @@ export default function Header({ scrollInfo }) {
                   not available
                 </span>
               )}
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

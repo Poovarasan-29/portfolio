@@ -2,7 +2,7 @@ import "../stylesheets/contact.css";
 
 export default function Contact() {
   return (
-    <div className="contact p-3 p-sm-5" id="contact">
+    <div className="contact p-3 p-sm-5" id="contact" title="share your thoughts">
       <div>
         <h1 className="display-2 contact-text">Contact</h1>
         <div className="about-underline contact-underline"></div>

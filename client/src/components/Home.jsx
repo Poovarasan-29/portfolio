@@ -7,11 +7,11 @@ export default function Home({ classname }) {
   );
   return (
     <div className={`home ms-4 ${classname}`}>
-      <h1 className="gradient-text display-3">Hello</h1>
-      <h1 className="gradient-text display-3">I'm Poovarasan</h1>
-      <h3 className="gradient-text mern-stack-text display-6">
+      <h1 className="gradient-text display-3" style={{fontStyle:'italic'}}>Hello</h1>
+      <h1 className="gradient-text display-3" style={{fontStyle:'italic'}}>I'm Poovarasan</h1>
+      {/* <h3 className="gradient-text mern-stack-text display-6">
         MERN Stack Developer
-      </h3>
+      </h3> */}
       <a href="/Poovarasan_Resume.pdf" className="btn" download="Poovarasan_Resume.pdf">
         <div className="animate-btn">
           <span className="bubble"></span>

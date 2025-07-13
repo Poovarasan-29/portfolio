@@ -1,7 +1,7 @@
 import "../stylesheets/about.css";
 import image from "../assets/aboutIMG.webp";
 export default function About() {
-  const text = `Hi, I'm Poovarasan, a passionate third-year B.Tech student specializing in Information Technology at Hindusthan College of Engineering and Technology, Coimbatore. I firmly believe that no challenge is insurmountable; if I take on a task, I dedicate myself wholeheartedly to solving it, no matter how complex it may seem. My coding journey began during my college days when I developed a keen interest in web technologies, and since then, I've been continuously expanding my skills. Currently, I'm focused on seamlessly creating projects that help me implement and refine what I've learned. Looking ahead, my dream is to collaborate with expert teams to gain deeper insights and grow as a professional.
+  const text = `Hi, I'm Poovarasan, a passionate final-year B.Tech student specializing in Information Technology at Hindusthan College of Engineering and Technology, Coimbatore. I firmly believe that no challenge is insurmountable; if I take on a task, I dedicate myself wholeheartedly to solving it, no matter how complex it may seem. My coding journey began during my college days when I developed a keen interest in web technologies, and since then, I've been continuously expanding my skills. Currently, I'm focused on seamlessly creating projects that help me implement and refine what I've learned. Looking ahead, my dream is to collaborate with expert teams to gain deeper insights and grow as a professional.
 `;
 
   // Function to wrap words in spans
@@ -46,10 +46,11 @@ export default function About() {
       </span>
     ));
   };
+
   return (
     <div className="p-2 p-md-5" id="about" style={{overflow:'hidden'}}>
       <div>
-        <h1 className="display-2" style={{ color: "#010b30" }}>
+        <h1 className="display-2 about-text" style={{ color: "#010b30" }}>
           About
         </h1>
         <div className="about-underline"></div>
