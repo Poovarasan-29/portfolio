@@ -24,14 +24,14 @@ export default function Projects() {
     },
     {
       thumbnailImg: ToDoApplication,
-      title: "ToDo Application",
+      title: "Todo Application",
       description:
-        "This ToDo application is a full-stack MERN project featuring real-time CRUD operations with MongoDB Atlas integration. It offers a user-friendly interface for task management, including adding, editing, and deleting tasks.",
+        "This Todo application is a full-stack MERN project featuring real-time CRUD operations with MongoDB Atlas integration. It offers a user-friendly interface for task management, including adding, editing, and deleting tasks.",
       technologies: ["HTML", "CSS", "Bootstrap", "MERN"],
       links: {
-        github: "https://github.com/Poovarasan-29/Todo-MERN",
+        github: "https://github.com/Poovarasan-29/my-todo",
         linkedin: "",
-        site: "https://todo-mern-black.vercel.app/",
+        site: "https://my-todo-one-fawn.vercel.app/",
         video: "",
       },
       ongoing: false,
