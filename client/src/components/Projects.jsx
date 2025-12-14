@@ -1,10 +1,10 @@
 import "../stylesheets/projects.css";
 import CurveArrow from "./CurveArrow";
-import rentEasee from "../assets/projectImages/renteaseeIMG.webp";
 import JWTauthentication from "../assets/projectImages/JWTauthenticationIMG.webp";
 import ToDoApplication from "../assets/projectImages/ToDoAppIMG.webp";
 import TypingClassIMG from "../assets/projectImages/TypingClassIMG.webp";
 import InfiniteFortune from "../assets/projectImages/InfiniteFortuneIMG.png";
+import AttendanceSystemIMG from "../assets/projectImages/AttendanceSystem.png";
 
 export default function Projects() {
   const contents = [
@@ -66,27 +66,21 @@ export default function Projects() {
       ongoing: false,
     },
     {
-      thumbnailImg: rentEasee,
-      title: "RentEasee",
+      thumbnailImg: AttendanceSystemIMG,
+      title: "Employee Attendance System",
       description:
-        "A platform for renting yellow-board vehicles and hiring freelance drivers, featuring vehicle listings, driver profiles, real-time search, and membership-based access control.",
+        "The system replaces manual attendance (like spreadsheets) with a digital, automated solution that ensures accuracy for payroll and gives management actionable insights into workforce reliability.",
       technologies: [
-        "CSS",
-        "Bootstrap",
         "Javascript",
+        "Tailwind",
         "MERN",
         "Redux",
-        "Firebase",
       ],
       links: {
-        github: "https://github.com/Poovarasan-29/RentEaseeRepo",
-        linkedin:
-          "https://www.linkedin.com/feed/update/urn:li:activity:7241847329706668032/",
-        site: "",
-        video:
-          "https://drive.google.com/file/d/1TVLKRmDm8N3ZdXjxw2rXtJw_ns3LE1Wy/view?usp=sharing",
+        github: "https://github.com/Poovarasan-29/Attendance-System",
+        site: "https://attendance-system-beta-nine.vercel.app/",
+       
       },
-      ongoing: true,
     },
   ];
 
