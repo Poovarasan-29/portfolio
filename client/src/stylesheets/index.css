@@ -12,16 +12,3 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbar-thumb-color, orange); /* Default color */
-  border-radius: 50px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}

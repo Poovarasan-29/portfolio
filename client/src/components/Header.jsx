@@ -22,7 +22,7 @@ export default function Header({ scrollInfo }) {
   return (
     <nav
       className="navbar navbar-expand-sm position-fixed top-0"
-      style={{ zIndex: "999", width: "100vw" }}
+      style={{ zIndex: "1050", width: "100vw" }}
     >
       <div className="container">
         {/* Logo */}

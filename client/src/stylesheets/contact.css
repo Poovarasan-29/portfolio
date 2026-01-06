@@ -1,72 +1,53 @@
-.contact {
-  background-color: #010617;
-}
-
-.contact-underline {
-  background-color: white;
-}
-
-.contact-list li a {
-  font-weight: 600;
-  letter-spacing: 3px;
-  opacity: 0.7;
-  transition: 0.5s;
-  text-decoration: none;
+#contact {
+  position: relative;
+  background: radial-gradient(circle at center, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   color: white;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
-.contact-list li a:hover {
-  opacity: 1;
-  letter-spacing: 0px;
-  transition: 0.5s;
+.contact-container {
+  position: relative;
+  z-index: 1;
 }
 
-.contact-list li p {
-  height: 4px;
-  width: 0px;
-  background-color: green;
-  transition: 0.5s;
+.social-card {
+  width: 160px;
+  height: 160px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.contact-list li a:hover + p {
-  width: 100px;
-  transition: 0.5s;
-}
-.contact-text,
-.hello-text,
-.links-text {
-  transition: 0.3s;
+.social-card .icon-wrapper {
+  transition: transform 0.4s ease;
 }
 
-@media only screen and (max-width: 500px) {
-  .contact-text {
-    font-size: 35px;
-    transition: 0.3s;
-  }
-  .hello-text,
-  .links-text {
-    font-size: 30px;
-    transition: 0.3s;
-  }
+.social-card:hover .icon-wrapper {
+  transform: scale(1.2) rotate(5deg);
 }
-@media only screen and (max-width: 340px) {
-  .hello-text,
-  .links-text {
-    font-size: 24px;
-    transition: 0.3s;
-  }
+
+.social-card span {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
 }
-@media only screen and (max-width: 300px) {
-  .hello-text {
-    margin-bottom: 15px;
-    font-size: 35px;
+
+@media (max-width: 576px) {
+  .social-card {
+    width: 130px;
+    height: 130px;
   }
-  .break {
-    display: none;
+
+  .social-card i {
+    font-size: 2.5rem !important;
   }
-  .links-text {
-    font-size: 30px;
-    transition: 0.3s;
-    margin: 0 auto;
+
+  .social-card span {
+    font-size: 0.9rem;
   }
 }

@@ -1,10 +1,10 @@
 import "../stylesheets/projects.css";
-import CurveArrow from "./CurveArrow";
 import JWTauthentication from "../assets/projectImages/JWTauthenticationIMG.webp";
 import ToDoApplication from "../assets/projectImages/ToDoAppIMG.webp";
 import TypingClassIMG from "../assets/projectImages/TypingClassIMG.webp";
 import InfiniteFortune from "../assets/projectImages/InfiniteFortuneIMG.png";
 import AttendanceSystemIMG from "../assets/projectImages/AttendanceSystem.png";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const contents = [
@@ -56,7 +56,7 @@ export default function Projects() {
       title: "Infinite Fortune",
       description:
         "This is an investment-based web app where users buy profit plans, earn daily returns, claim profits, and withdraw once eligible. Users also earn a 30% referral bonus from invitee deposits.",
-      technologies: ["CSS", "Bootstrap", "MERN", "JWT", "Node mailer","bcrypt"],
+      technologies: ["CSS", "Bootstrap", "MERN", "JWT", "Node mailer", "bcrypt"],
       links: {
         github: "https://github.com/Poovarasan-29/Infinite-Fortune",
         linkedin: "",
@@ -79,88 +79,117 @@ export default function Projects() {
       links: {
         github: "https://github.com/Poovarasan-29/Attendance-System",
         site: "https://attendance-system-beta-nine.vercel.app/",
-       
+
       },
     },
   ];
 
   return (
-    <div className="projects p-sm-5" id="projects">
-      <h1 className="m-0 project-text">What I have done so far</h1>
-      <CurveArrow />
-      <div
-        className="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center w-100 mx-auto"
-        style={{ overflow: "hidden" }}
-      >
-        {contents.map((content, index) => (
-          <div key={index} className="p-2">
-            <div className="card p-0 h-100">
-              <img
-                src={content.thumbnailImg}
-                className="card-img-top p-"
-                alt="..."
-                style={{
-                  border: "1px solid",
-                  borderColor: "transparent",
-                  borderBottomColor: "rgba(0,0,0,.2)",
-                }}
-              />
-              <div className="card-body">
-                <h5 className="card-title color-purple">{content.title}</h5>
-                <p className="card-text">{content.description}</p>
-                <ul className="list-unstyled d-flex flex-wrap gap-2">
-                  {content.technologies.map((technology, i) => (
-                    <li className="technology-design" key={i}>
-                      {technology}
-                    </li>
-                  ))}
-                </ul>
-                <div className="w-100 d-flex align-items-center justify-content-between">
-                  <div>
-                    <a
-                      href={content.links.github}
-                      className="btn external-links"
-                      target="_blank"
-                      title="Source Code"
-                    >
-                      <i className="bi bi-github fs-1"></i>
-                    </a>
-                    {/* <a
-                      href={content.links.linkedin}
-                      className="btn external-links"
-                      target="_blank"
-                    >
-                      <i className="bi bi-linkedin fs-1"></i>
-                    </a> */}
+    <div className="projects p-sm-5 bg-light" id="projects" style={{ position: "relative" }}>
+      {/* Background Accent */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        opacity: 0.05,
+        background: 'repeating-linear-gradient(45deg, #000 0, #000 1px, transparent 0, transparent 40%)',
+        backgroundSize: '30px 30px',
+        pointerEvents: 'none',
+        maskImage: 'linear-gradient(to bottom, transparent, black 15%)', // Fade in lines from top
+        WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 20%)'
+      }}></div>
 
-                    <a
-                      href={
-                        content.links.site
-                          ? content.links.site
-                          : content.links.video
-                      }
-                      className="btn external-links"
-                      target="_blank"
-                      title={content.links.site ? "Visit" : "Video"}
-                    >
-                      <i
-                        className={`bi ${
-                          content.links.site ? "bi-globe2" : "bi-camera-reels"
-                        } fs-1`}
-                      ></i>
-                    </a>
+      <div className="container py-5">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-5 text-center" // Centered
+        >
+          <h1 className="display-4 fw-bold mb-3" style={{ color: "#010b30" }}>
+            What I have done so far
+          </h1>
+          <div className="bg-secondary mx-auto" style={{ width: '60px', height: '4px', borderRadius: '2px' }}></div> {/* mx-auto for centering line */}
+          <p className="lead text-muted mt-3">A showcase of my recent technical projects</p>
+        </motion.div>
+
+        <div className="row g-4">
+          {contents.map((content, index) => (
+            <div key={index} className="col-md-6 col-lg-4">
+              {/* Outer Motion Div for Entrance with Delay */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="h-100"
+              >
+                {/* Inner Motion Div for Hover with Instant Reaction */}
+                <motion.div
+                  className="card h-100 border-0 shadow-sm overflow-hidden"
+                  whileHover={{
+                    y: -10,
+                    boxShadow: "0 1rem 3rem rgba(0,0,0,.175)",
+                    transition: { duration: 0.2 } // Instant hover
+                  }}
+                >
+                  <div className="position-relative overflow-hidden" style={{ height: "200px" }}>
+                    <motion.img
+                      src={content.thumbnailImg}
+                      className="w-100 h-100 object-fit-cover"
+                      alt={content.title}
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.5 }}
+                    />
+                    {content.ongoing && (
+                      <div className="position-absolute top-0 end-0 m-3 badge bg-warning text-dark shadow-sm">
+                        Ongoing
+                      </div>
+                    )}
                   </div>
-                  {content.ongoing && (
-                    <div className="star-container">
-                      <div className="star">Ongoing</div>
+
+                  <div className="card-body d-flex flex-column p-4">
+                    <h5 className="card-title fw-bold mb-3" style={{ color: "#2b2b2b" }}>{content.title}</h5>
+                    <p className="card-text text-muted small flex-grow-1" style={{ lineHeight: "1.6" }}>{content.description}</p>
+
+                    <div className="d-flex flex-wrap gap-2 mb-4">
+                      {content.technologies.map((tech, i) => (
+                        <span key={i} className="badge bg-light text-secondary border fw-normal px-2 py-1">
+                          {tech}
+                        </span>
+                      ))}
                     </div>
-                  )}
-                </div>
-              </div>
+
+                    <div className="d-flex gap-2 mt-auto">
+                      <a
+                        href={content.links.github}
+                        className="btn btn-outline-dark btn-sm flex-fill d-flex align-items-center justify-content-center gap-2"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="bi bi-github"></i> Code
+                      </a>
+
+                      {(content.links.site || content.links.video) && (
+                        <a
+                          href={content.links.site || content.links.video}
+                          className="btn btn-dark btn-sm flex-fill d-flex align-items-center justify-content-center gap-2"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i className={`bi ${content.links.site ? "bi-globe2" : "bi-play-circle"}`}></i>
+                          {content.links.site ? "Live Demo" : "Watch Video"}
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
             </div>
-            {/* </div> */}
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
